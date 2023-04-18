@@ -3,8 +3,7 @@ const usersRoutes = Router()
 const UsersController = require("../controllers/UsersController.js")
 const userController = new UsersController()
 
-usersRoutes.get("/", userController.index)
-
 usersRoutes.post("/", userController.create)
+usersRoutes.put("/:id", userController.update)
 
 module.exports = usersRoutes
